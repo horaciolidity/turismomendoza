@@ -1,173 +1,188 @@
-/* General reset  */
-*{
-  margin:0px;
-  padding:0px;
-  box-sizing:border-box;
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
- font-family: 'Roboto', sans-serif;
- background-color:#edeff0;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeff0;
 }
 
 /* #HEADER */
-
-header{
-  background-color:#fff;
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 header a {
-  display:inline-block;
-  padding:15px;
-  text-decoration:none;
-  color:black;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
-#logo{
-  font-size:1.5em;
-  font-family: 'Open Sans', sans-serif;
-/*   Recuerda el padding viene heredado de arriba */
-
+#logo {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
 }
+
+header nav ul {
+    list-style: none;
+}
+
 header nav li {
-  display: inline-block
+    display: inline;
+    margin-right: 20px;
 }
 
 header nav a {
-  transition: background-color 0.9s;
-  
-/*   OJO TENEMOS QUE CHEQUEAR TRANSITION TAMBIEN  */
+    transition: color 0.3s;
 }
-header nav  a:hover{
-  background-color:rgba( 0,0,0,.1);
-/*   ESTE ES UN  PSEUDO ELEMENTO CON HOVER Y RBA PARA QUE ADMITA TRANSPARENCIA OJO */
-} 
+
+header nav a:hover {
+    color: #55c18F;
+}
+
 /* #HEADER */
 
 /* # INTRO */
-
-#intro{
-  min-height:350px;
-  background-color:red;
-  background-image:url(https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  background-size:cover;
-  background-position: left;
-  background-attachment:fixed;
-/*   BACKGROUND ATTACHMENT FIXED ES LA QUE CREA ESTE EFECTO Y LO DEJA FIJO */ 
- 
+#intro {
+    min-height: 350px;
+    background-color: #333;
+    background-image: url(https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
 }
 
-.intro-text{
-  color:white;
-  text-align:center;
-  position:relative;
-  top:calc(350px/3);
-  
+.intro-text {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: calc(350px / 3);
 }
 
-.intro-text h2{
-  padding:15px;
-  background-color: rgba(0,0,0,.5);
- }
-
-.intro-text h3{
-  padding:10px; 
-  background-color: rgba(0,0,0,.5);
+.intro-text h2 {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.call-to-action{
-  padding:30px;
-  
+.intro-text h3 {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
+
+.call-to-action {
+    padding: 30px;
+}
+
 .call-to-action a {
-  text-decoration:none;
-  color:white;
-    padding:20px;
-  background-color:green;
-  transition: box-shadow 0.5s;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    background-color: #55c18F;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
-.call-to-action a:hover{
-  box-shadow: 2px 2px 15px rgba(0,0,0,1.50);
+.call-to-action a:hover {
+    background-color: #333;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* # INTRO */
+
 /* #WELCOME */
-#welcome{
-  background-color:#55c18F;
-  color:white;
-  padding-bottom:20px;
-  }
-#welcome h2{
-  padding:15px;
-  text-align:center;
-  }
-#welcome p{
-  padding:10px; 
-}
-.services-container{
-  max-width:700px;
-  margin: 10px auto; 
-/*   background:red */
-}
-.services{
-  margin:10px 10px;
-  text-align:center; 
-/*   background:purple */
-}
-.service-title{
-  padding:15px;
-   border-bottom: 2px solid #fff;
-  font-size:1.4em;
+#welcome {
+    background-color: #55c18F;
+    color: white;
+    padding: 20px 0;
 }
 
-.works-container{
-  max-width:700px;
-  margin: 10px auto;
-  
-  
+#welcome h2 {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8em;
 }
 
-.work{
-  height:250px;
-  margin:10px 20px;
-  position:relative;
-  
-}
-.work.one{
-background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
- background-size:cover;
- background-position:center;
+#welcome p {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.work.two{
-background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
- background-size:cover;
- background-position:center;
+.services-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.work.three{
-background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
- background-size:cover;
- background-position:center;
+.services {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
-.work.four{
-background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
- background-size:cover;
- background-position:center;
+.service-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
 }
 
-.work-tittle h4{
-  padding:20px;
-  text-align:center;
-  background-color: rgba(0,0,0,0.5);
-  position:absolute;
-  bottom:0;
-  width:100%;
+.works-container {
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work {
+    flex: 1;
+    height: 250px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.work.one {
+    background-image: url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.work.two {
+    background-image: url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.work.three {
+    background-image: url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.work.four {
+    background-image: url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.work-title h4 {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2em;
 }
 /* #WELCOME */
 
-/*BLOG*/
-/*BLOG*/
+/* BLOG */
+/* BLOG */
