@@ -1,0 +1,173 @@
+/* General reset  */
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+body{
+ font-family: 'Roboto', sans-serif;
+ background-color:#edeff0;
+}
+
+/* #HEADER */
+
+header{
+  background-color:#fff;
+}
+
+
+header a {
+  display:inline-block;
+  padding:15px;
+  text-decoration:none;
+  color:black;
+}
+
+#logo{
+  font-size:1.5em;
+  font-family: 'Open Sans', sans-serif;
+/*   Recuerda el padding viene heredado de arriba */
+
+}
+header nav li {
+  display: inline-block
+}
+
+header nav a {
+  transition: background-color 0.9s;
+  
+/*   OJO TENEMOS QUE CHEQUEAR TRANSITION TAMBIEN  */
+}
+header nav  a:hover{
+  background-color:rgba( 0,0,0,.1);
+/*   ESTE ES UN  PSEUDO ELEMENTO CON HOVER Y RBA PARA QUE ADMITA TRANSPARENCIA OJO */
+} 
+/* #HEADER */
+
+/* # INTRO */
+
+#intro{
+  min-height:350px;
+  background-color:red;
+  background-image:url(https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size:cover;
+  background-position: left;
+  background-attachment:fixed;
+/*   BACKGROUND ATTACHMENT FIXED ES LA QUE CREA ESTE EFECTO Y LO DEJA FIJO */ 
+ 
+}
+
+.intro-text{
+  color:white;
+  text-align:center;
+  position:relative;
+  top:calc(350px/3);
+  
+}
+
+.intro-text h2{
+  padding:15px;
+  background-color: rgba(0,0,0,.5);
+ }
+
+.intro-text h3{
+  padding:10px; 
+  background-color: rgba(0,0,0,.5);
+}
+
+.call-to-action{
+  padding:30px;
+  
+}
+.call-to-action a {
+  text-decoration:none;
+  color:white;
+    padding:20px;
+  background-color:green;
+  transition: box-shadow 0.5s;
+}
+
+.call-to-action a:hover{
+  box-shadow: 2px 2px 15px rgba(0,0,0,1.50);
+}
+
+/* # INTRO */
+/* #WELCOME */
+#welcome{
+  background-color:#55c18F;
+  color:white;
+  padding-bottom:20px;
+  }
+#welcome h2{
+  padding:15px;
+  text-align:center;
+  }
+#welcome p{
+  padding:10px; 
+}
+.services-container{
+  max-width:700px;
+  margin: 10px auto; 
+/*   background:red */
+}
+.services{
+  margin:10px 10px;
+  text-align:center; 
+/*   background:purple */
+}
+.service-title{
+  padding:15px;
+   border-bottom: 2px solid #fff;
+  font-size:1.4em;
+}
+
+.works-container{
+  max-width:700px;
+  margin: 10px auto;
+  
+  
+}
+
+.work{
+  height:250px;
+  margin:10px 20px;
+  position:relative;
+  
+}
+.work.one{
+background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ background-size:cover;
+ background-position:center;
+}
+
+.work.two{
+background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ background-size:cover;
+ background-position:center;
+}
+
+.work.three{
+background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ background-size:cover;
+ background-position:center;
+}
+
+.work.four{
+background-image:url(https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ background-size:cover;
+ background-position:center;
+}
+
+.work-tittle h4{
+  padding:20px;
+  text-align:center;
+  background-color: rgba(0,0,0,0.5);
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+/* #WELCOME */
+
+/*BLOG*/
+/*BLOG*/
