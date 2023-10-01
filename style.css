@@ -6,15 +6,16 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFD700;
+    font-family: 'Montserrat', sans-serif; /* Cambiado a una fuente más elegante */
+    background-color: #f9f9f9; /* Fondo más claro para resaltar el contenido */
     line-height: 1.6;
     font-size: 16px;
+    color: #333; /* Color de texto oscuro para una mejor legibilidad */
 }
 
 /* #HEADER */
 header {
-    background-color: #FF69B4;
+    background-color: #4caf50; /* Verde para una sensación fresca y natural */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,14 +25,14 @@ header {
 
 header a {
     text-decoration: none;
-    color: #4B0082;
+    color: #fff;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 #logo {
-    font-size: 1.8em;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 2em; /* Tamaño del logo aumentado */
+    font-family: 'Pacifico', cursive; /* Una fuente manuscrita para un toque amigable */
 }
 
 header nav ul {
@@ -44,7 +45,7 @@ header nav li {
 }
 
 header nav a:hover {
-    color: #800080;
+    color: #ffeb3b; /* Amarillo para resaltar en el hover */
 }
 
 /* #HEADER */
@@ -57,74 +58,53 @@ header nav a:hover {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-
-.intro-text {
-    color: #FFD700;
+    color: #fff; /* Texto blanco para contrastar con el fondo */
     text-align: center;
-    position: relative;
-    top: calc(400px / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro-text h2 {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 2em;
+    font-size: 3em; /* Texto más grande y llamativo */
     text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
 }
 
 .intro-text h3 {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 1.5em;
+    font-size: 1.8em; /* Subtítulos más grandes */
     text-shadow: 2px 2px 4px #000;
-}
-
-.call-to-action {
-    padding: 40px;
+    margin-bottom: 40px;
 }
 
 .call-to-action a {
-    text-decoration: none;
-    color: #FFD700;
-    padding: 20px 40px;
-    background-color: #4B0082;
-    border-radius: 5px;
-    transition: background-color 0.5s, box-shadow 0.5s;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.call-to-action a:hover {
-    background-color: #800080;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em; /* Botones más grandes */
+    padding: 15px 30px;
+    border-radius: 8px;
 }
 
 /* # INTRO */
 
 /* #WELCOME */
 #welcome {
-    background-color: #4B0082;
-    color: #FFD700;
+    background-color: #4caf50;
+    color: #fff;
     padding: 40px 0;
+    text-align: center;
 }
 
 #welcome h2 {
-    padding: 20px;
-    text-align: center;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px #000;
+    font-size: 2.8em; /* Título más grande */
+    margin-bottom: 20px;
 }
 
 #welcome p {
-    padding: 15px;
-    text-align: center;
-    font-size: 1.2em;
-    text-shadow: 2px 2px 4px #000;
+    font-size: 1.4em; /* Texto más grande */
+    margin-bottom: 40px;
 }
 
 .services-container {
-    max-width: 800px;
+    max-width: 1000px; /* Ajuste para una mejor disposición */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -135,50 +115,32 @@ header nav a:hover {
     flex: 1;
     margin: 20px;
     text-align: center;
-    padding: 30px;
-    background-color: #87CEEB;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px; /* Más espacio interno */
+    background-color: #b2dfdb; /* Color de fondo más claro para un contraste agradable */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-title {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #FFD700;
-}
-
-.works-container {
-    max-width: 800px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    font-size: 2em; /* Tamaño del título aumentado */
+    margin-bottom: 30px; /* Espaciado inferior aumentado */
+    border-bottom: 3px solid #ffeb3b; /* Borde más grueso y color amarillo */
 }
 
 .work {
     flex: 1;
-    height: 300px;
-    margin: 20px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+    height: 250px; /* Altura reducida para un mejor equilibrio */
+    border-radius: 15px;
     overflow: hidden;
+    position: relative;
 }
 
 .work-title h4 {
-    padding: 20px;
+    font-size: 1.8em; /* Tamaño del título aumentado */
+    padding: 15px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para mejor legibilidad */
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #000;
 }
-
-/* #WELCOME */
-
-/* BLOG */
-/* BLOG */
