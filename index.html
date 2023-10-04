@@ -98,13 +98,24 @@
     <!-- End footer -->
 </body>
     <script>
-    function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // ID único del usuario
-    console.log('Name: ' + profile.getName()); // Nombre del usuario
-    console.log('Email: ' + profile.getEmail()); // Email del usuario
-    // Aquí puedes enviar el ID del usuario a tu servidor o realizar otras acciones
-}
+      // Esta función se llama cuando el SDK de Google Sign-In se ha cargado y está listo para ser utilizado
+        function initGoogleSignIn() {
+            gapi.load('auth2', function() {
+                // Inicializar el SDK con tu client_id
+                gapi.auth2.init({
+                    client_id: 'AIzaSyDJb_wbfDLnAqgqOH6V4lH8E_Ozk6rsuYE' // Reemplaza TU_CLIENT_ID con tu ID de cliente proporcionado por Google
+                });
+            });
+        }
+
+        // Esta función se llama cuando el usuario ha iniciado sesión correctamente
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // ID único del usuario
+            console.log('Name: ' + profile.getName()); // Nombre del usuario
+            console.log('Email: ' + profile.getEmail()); // Email del usuario
+            // Aquí puedes enviar el ID del usuario a tu servidor o realizar otras acciones
+        }
     </script>
 
 </html>
