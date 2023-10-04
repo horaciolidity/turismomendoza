@@ -98,23 +98,16 @@
     <!-- End footer -->
 </body>
     <script>
-      // Esta función se llama cuando el SDK de Google Sign-In se ha cargado y está listo para ser utilizado
-        function initGoogleSignIn() {
-            gapi.load('auth2', function() {
-                // Inicializar el SDK con tu client_id
-                gapi.auth2.init({
-                    client_id: 'AIzaSyDJb_wbfDLnAqgqOH6V4lH8E_Ozk6rsuYE' // Reemplaza TU_CLIENT_ID con tu ID de cliente proporcionado por Google
-                });
-            });
-        }
+      // Función para iniciar el proceso de autenticación con Google
+        function iniciarAutenticacion() {
+            // Reemplaza 'TU_CLAVE_DE_API' con tu clave de API real
+            var apiKey = 'AIzaSyDJb_wbfDLnAqgqOH6V4lH8E_Ozk6rsuYE';
 
-        // Esta función se llama cuando el usuario ha iniciado sesión correctamente
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // ID único del usuario
-            console.log('Name: ' + profile.getName()); // Nombre del usuario
-            console.log('Email: ' + profile.getEmail()); // Email del usuario
-            // Aquí puedes enviar el ID del usuario a tu servidor o realizar otras acciones
+            // URL de solicitud de autenticación con la clave de API
+            var authUrl = 'https://accounts.google.com/o/oauth2/auth?client_id=' + apiKey + '&redirect_uri=TU_URL_DE_REDIRECCION&response_type=code&scope=email';
+
+            // Redirige al usuario a la página de autenticación de Google
+            window.location.href = authUrl;
         }
     </script>
 
