@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Travel Mendoza Turismo</title>
+    <title>Travel La Pampa Turismo</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -12,7 +12,7 @@
     <!-- Header Start -->
     <header>
         <div id="logo">
-            <a href="#">Travel Mendoza Turismo</a>
+            <a href="#">Travel La Pampa Turismo</a>
         </div>
             <button onclick="iniciarAutenticacion()">Iniciar sesión con Google</button>
 
@@ -45,17 +45,17 @@
     <!-- #WELCOME -->
     <section id="welcome">
         <h2>Welcome to Travel Mendoza Turismo</h2>
-        <p>Discover the most beautiful and tourist-friendly places in Mendoza Province with our professional and secure traveling services. We offer tours starting from $80 USD, available in the morning, afternoon, and evening, at any time that suits you.</p>
+        <p>Discover the most beautiful and tourist-friendly places in la pampa Province with our professional and secure traveling services. We offer tours starting from $80 USD, available in the morning, afternoon, and evening, at any time that suits you.</p>
 
         <div class="services-container">
             <div class="services">
                 <h3 class="service-title">Scenic Tours</h3>
-                <p>Explore breathtaking landscapes and enjoy the best of Mendoza's natural beauty with our guided tours.</p>
+                <p>Explore breathtaking landscapes and enjoy the best of la pampa natural beauty with our guided tours.</p>
             </div>
 
             <div class="services">
                 <h3 class="service-title">Cultural Experiences</h3>
-                <p>Immerse yourself in the rich culture of Mendoza with our cultural tours and activities.</p>
+                <p>Immerse yourself in the rich culture of la pampa with our cultural tours and activities.</p>
             </div>
 
             <div class="services">
@@ -99,19 +99,7 @@
     <!-- End footer -->
 </body>
     <script>
-        const apiKey = process.env.API_KEY;
-
-      // Función para iniciar el proceso de autenticación con Google
-        function iniciarAutenticacion() {
-            // Reemplaza 'TU_CLAVE_DE_API' con tu clave de API real
-            var apiKey = 'AIzaSyDJb_wbfDLnAqgqOH6V4lH8E_Ozk6rsuYE';
-
-            // URL de solicitud de autenticación con la clave de API
-            var authUrl = 'https://accounts.google.com/o/oauth2/auth?client_id=' + apiKey + '&redirect_uri=TU_URL_DE_REDIRECCION&response_type=code&scope=email';
-
-            // Redirige al usuario a la página de autenticación de Google
-            window.location.href = authUrl;
-        }
+       
     </script>
 
 </html>
