@@ -157,6 +157,49 @@ div#box .box-panel {
 
 }
 
+        .box {
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff; /* Ajusta el color de fondo según tus preferencias */
+        }
+
+        .box-top {
+            color: #fff;
+            text-shadow: 0 1px #000;
+            background: #2980b9;
+            padding: 5px;
+            padding-left: 15px;
+            font-weight: 300;
+        }
+
+        .box-panel {
+            padding: 15px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #424242;
+            font-size: 0.8em;
+        }
 
 
 @media only screen and (min-width: 480px) {
