@@ -1,103 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Travel Buen Mendoza</title>
-
-
-
-
     <link rel="stylesheet" href="style.css">
-
-
-
-
 </head>
 
 <body>
-
     <div id="header">
         <div class="logo">
             <a href="#">Travel<span>Buen Mendoza</span></a>
         </div>
-
     </div>
-
 
     <a class="mobile">MENU</a>
 
-
     <div id="container">
-
         <div class="sidebar">
             <ul id="nav">
                 <li>
                     <span>
-          <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32" >
-        </span>
+                        <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32">
+                    </span>
                     <a class="selected" href="#">Reservar Coche</a>
                 </li>
                 <li>
                     <span>
-          <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32" >
-        </span><a href="#">Destinos</a>
+                        <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32">
+                    </span><a href="#">Destinos</a>
                 </li>
                 <li>
                     <span>
-          <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32" >
-        </span><a href="#">Paseos</a>
+                        <img src="http://www.webhostingreviewsbynerds.com/wp-content/plugins/rss-poster/cache/e17b1_fnal-570x456.png" width="32" height="32">
+                    </span><a href="#">Paseos</a>
                 </li>
             </ul>
-
         </div>
 
         <div class="content">
             <h1>Reservar</h1>
             <p>Coche disponible</p>
 
-            <div id="box">
+            <div class="box" id="cacheuta">
                 <div class="box-top">Cacheuta</div>
-                <div class="box-panel">Disponible</div>
+                <div class="box-panel">
+                    <label for="people_cacheuta">Personas:</label>
+                    <input type="number" id="people_cacheuta" min="1" max="10" value="1">
+                    <button onclick="cotizarViaje('Cacheuta')">Cotizar Viaje</button>
+                    <p id="info_cacheuta"></p>
+                </div>
             </div>
 
-            <div id="box">
+            <div class="box" id="potrerillos">
                 <div class="box-top">Potrerillos</div>
-                <div class="box-panel">Disponible</div>
+                <div class="box-panel">
+                    <label for="people_potrerillos">Personas:</label>
+                    <input type="number" id="people_potrerillos" min="1" max="10" value="1">
+                    <button onclick="cotizarViaje('Potrerillos')">Cotizar Viaje</button>
+                    <p id="info_potrerillos"></p>
+                </div>
             </div>
 
-
-            <div id="box">
+            <div class="box" id="villa_vicencio">
                 <div class="box-top">Villa Vicencio</div>
-                <div class="box-panel">Disponible</div>
+                <div class="box-panel">
+                    <label for="people_villa_vicencio">Personas:</label>
+                    <input type="number" id="people_villa_vicencio" min="1" max="10" value="1">
+                    <button onclick="cotizarViaje('Villa Vicencio')">Cotizar Viaje</button>
+                    <p id="info_villa_vicencio"></p>
+                </div>
             </div>
-
-
         </div>
-
-
     </div>
-    <!-- #container -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/index.js"></script>
 
+    <script>
+        function cotizarViaje(destino) {
+            var personas = document.getElementById("people_" + destino).value;
+            // Aquí puedes realizar cálculos con la cantidad de personas y mostrar la información
+            // También puedes realizar una solicitud al servidor para obtener información adicional
+            // En este ejemplo, se muestra un mensaje simple
+            var infoElement = document.getElementById("info_" + destino);
+            infoElement.innerHTML = "Cotización para " + personas + " personas en " + destino;
+        }
 
+        $(document).ready(function () {
+            $("a.mobile").click(function () {
+                $(".sidebar").slideToggle('fast');
+            });
 
-
-
-
+            window.resize = function (event) {
+                if ($(window).width() > 320) {
+                    $(".sidebar").show();
+                }
+            };
+        });
+    </script>
 </body>
-<script>
-$(document).ready(function(){
-  $("a.mobile").click(function(){
-    $(".sidebar").slideToggle('fast');
-  });
-  window.resize = function(event){
-    if($(window).width() > 320){
-      $(".sidebar").show();
-    }
-  };
-});
 
-
-    
-</script>
 </html>
